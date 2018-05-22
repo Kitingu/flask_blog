@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content%}
+    <h1>Home page</h1>
+    {%for post in posts%}
+      <h1>{{post.title}}</h1>
+      <p> by {{post.author}}</p>
+      <p>{{ post.content}}</p>
+      <p>{{post.date_posted}}</p>
+    {%endfor%}
+    <!-- in flask posts are looped
+    over using the block content and variables using
+    double parenthesis-->
+{% endblock content%}
